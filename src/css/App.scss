@@ -1,3 +1,5 @@
+@import 'css/_variables.scss';
+
 .App {
   position: relative;
 }
@@ -11,9 +13,9 @@
 }
 
 .content-ctn {
-  background-color: #1c1c1c;
+  background-color: $body_background-color--black;
   min-height: calc(100vh - 110px);
-  margin-top: 60px;
+  margin-top: $header_height;
   width: 100%;
 }
 
@@ -21,7 +23,7 @@
   position: relative;
 }
 
-@media (max-width: 639px) {
+@media (max-width: $layout-xsmall) {
   .hide-xsmall {
     display: none;
   }

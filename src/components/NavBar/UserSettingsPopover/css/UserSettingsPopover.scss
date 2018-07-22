@@ -1,7 +1,7 @@
+@import 'css/_variables.scss';
+
 .UserSettingsButton {
-  background: none;
   border: none;
-  color: white;
 }
 
 .UserSettingsButton span.Username {
@@ -18,4 +18,18 @@
 
 .ContributionPointsContainer .ContributionStar {  
   position: absolute;
+}
+
+/* ============ Dark theme ============ */
+
+.theme-dark .UserSettingsButton {
+  background: none;
+  color: $body_text-color--white;
+}
+
+/* ============ Light theme ============ */
+
+.theme-light .UserSettingsButton {
+  background: none;
+  color: $body_text-color--black;
 }

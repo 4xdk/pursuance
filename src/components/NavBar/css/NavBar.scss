@@ -65,7 +65,7 @@
     }
   }
 
-  @media (max-width: $tablet_width--portrait) {
+  @media (max-width: $layout-tablet_width--portrait) {
     border-width: 1px;
     border-style: solid;
     border-radius: 5px;
@@ -74,7 +74,7 @@
 
 /* ============ Dark theme ============ */
 
-.App.theme-dark {
+.theme-dark {
   .navbar {
     background-color: $body_background-color--black;
   }
@@ -100,7 +100,7 @@
       }
     }
 
-    @media (max-width: $tablet_width--portrait) {
+    @media (max-width: $layout-tablet_width--portrait) {
       background-color: $button_background-color--black;
       border-color: $button_border-color--white;
     } 
@@ -109,7 +109,7 @@
 
 /* ============ Light theme ============ */
 
-.App.theme-light {
+.theme-light {
   .navbar {
     background-color: $body_background-color--white;
   }
@@ -135,7 +135,7 @@
       }
     }
 
-    @media (max-width: $tablet_width--portrait) {
+    @media (max-width: $layout-tablet_width--portrait) {
       background-color: $button_background-color--white;
       border-color: $button_border-color--black;
     } 
