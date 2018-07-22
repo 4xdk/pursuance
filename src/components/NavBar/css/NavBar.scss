@@ -8,20 +8,20 @@
   width: 100%;
   top: 0;
   z-index: 10;
-}
 
-.navbar .container {
-  align-items: center;
-  width: 100%;
-  padding: 0 32px 0 32px;
+  .container {
+    align-items: center;
+    width: 100%;
+    padding: 0 32px 0 32px;
+  }
 }
 
 .navbar-collapse {
   height: 200px;
-}
 
-.navbar-collapse.collapse {
-  background-color: black;
+  &.collapse {
+    background-color: black;
+  }
 }
 
 .modal-title {
@@ -31,10 +31,10 @@
 .modal-btn-ctn {
   text-align: right;
   padding-right: 16px;
-}
 
-.modal-btn-ctn .btn {
-  margin-left: 10px;
+  .btn {
+    margin-left: 10px;
+  }
 }
 
 .navbar-header {
@@ -49,14 +49,34 @@
   color: #fcfcfc !important;
   padding-left: 0 !important;
   margin-left: 0 !important;
-}
 
-.navbar-brand:hover {
-  color: #8662ea !important;
+  &:hover {
+    color: #8662ea !important;
+  }
 }
 
 .navbar-nav {
   height: 60px;
+
+  li {
+    height: 60px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      color: #efefef !important;
+
+      &:hover {
+        color: #1fc7d3 !important;
+      }
+
+      button {
+        padding-bottom: 2px;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -65,24 +85,4 @@
     border: 1px solid white;
     border-radius: 5px;
   }
-}
-
-.navbar-nav li {
-  height: 60px;
-}
-
-.navbar-nav li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
-  color: #efefef !important;
-}
-
-.navbar-nav li a:hover {
-  color: #1fc7d3 !important;
-}
-
-.navbar-nav li a button {
-  padding-bottom: 2px;
-}
+} 
