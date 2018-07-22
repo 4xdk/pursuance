@@ -2,22 +2,39 @@
 
 .UserSettingsButton {
   border: none;
-}
 
-.UserSettingsButton span.Username {
-  vertical-align: middle;
-}
+	span {
+		margin-left: 5px;
 
-.UserSettingsButton span {
-  margin-left: 5px;
+    &.Username {
+      vertical-align: middle;
+    }
+	}
 }
 
 .ContributionPointsContainer {
   position: relative;
+
+  .ContributionStar {  
+    position: absolute;
+  }
 }
 
-.ContributionPointsContainer .ContributionStar {  
-  position: absolute;
+#user-settings-popopver .theme-change {
+  margin: 5px 0 10px;
+
+  span {
+    display: inline-block;
+    opacity: 0.4;
+    cursor: pointer;  
+    margin: 0 4px;
+
+    &.active {
+      opacity: 1;
+      background-color: transparent !important;
+      cursor: default;
+    }
+  }
 }
 
 /* ============ Dark theme ============ */
