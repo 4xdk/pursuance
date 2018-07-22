@@ -3,6 +3,10 @@
 .UserSettingsButton {
   border: none;
 
+  &:hover .Username {
+    color: $body_text-color--blue;
+  }
+
 	span {
 		margin-left: 5px;
 
@@ -20,33 +24,69 @@
   }
 }
 
-#user-settings-popopver .theme-change {
-  margin: 5px 0 10px;
+#user-settings-popopver {
+  .theme-change {
+    margin: 5px 0 10px;
 
-  span {
-    display: inline-block;
-    opacity: 0.4;
-    cursor: pointer;  
-    margin: 0 4px;
+    span {
+      transition: opacity $base-animation-style;
+      display: inline-block;
+      opacity: 0.4;
+      cursor: pointer;  
+      margin: 0 4px;
 
-    &.active {
-      opacity: 1;
-      background-color: transparent !important;
-      cursor: default;
+      &:hover {
+        opacity: 1;
+      }
+
+      &.active {
+        opacity: 1;
+        background-color: transparent !important;
+        cursor: default;
+      }
     }
+  }
+
+  .btn-default {
+    transition: all $base-animation-style;
   }
 }
 
 /* ============ Dark theme ============ */
 
-.theme-dark .UserSettingsButton {
-  background: none;
-  color: $body_text-color--white;
+.theme-dark {
+  .UserSettingsButton {
+    background: none;
+    color: $body_text-color--white;
+  }
+
+  &#user-settings-popopver {
+    border: $modal_border-style $modal_border-color--white;
+    background-color: $modal_background-color--black;
+
+    .popover-title {
+      background-color: $modal_background-color--black;
+      color: $body_text-color--white;
+    }
+
+    .theme-change {
+      color: $body_text-color--white;
+    }
+
+    .btn-default {
+      background-color: $button_background-color--black;
+      border: $button_border-style $button_border-color--white;
+      color: $body_text-color--white;
+
+      &:hover, 
+      &:active, 
+      &:focus {
+        background-color: $button_background-color--white;
+        color: $body_text-color--black;
+      }
+    }
+  }
 }
 
 /* ============ Light theme ============ */
-
-.theme-light .UserSettingsButton {
-  background: none;
-  color: $body_text-color--black;
-}
+// Default boostrap styles look fine

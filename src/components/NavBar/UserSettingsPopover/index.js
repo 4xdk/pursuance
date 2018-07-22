@@ -10,12 +10,12 @@ const UserSettingsPopover = ({ username, contributionPoints, userLogoutSuccess, 
     trigger="click"
     placement="bottom" 
     overlay={(
-      <Popover id="user-settings-popopver" title={username}>
+      <Popover id="user-settings-popopver" title={username} className={ 'theme-' + themeName }>
         <div className='theme-change'>
           Theme: <span className={themeName === 'dark' ? 'active' : ''} onClick={siteThemeChange.bind(this, {themeName: 'dark'})}>dark</span>
           <span className={themeName === 'light' ? 'active' : ''} onClick={siteThemeChange.bind(this, {themeName: 'light'})}>light</span>
         </div>
-        
+
         <Button bsSize="large" onClick={userLogoutSuccess}>
           Sign out
         </Button>

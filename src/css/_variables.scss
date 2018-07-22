@@ -16,7 +16,17 @@ $body_text-color--purple: #8662ea;
 $body_text-color--white: #fcfcfc;
 
 /* Buttons */
+$button_border-style: 1px solid;
 $button_border-color--black: #141414;
 $button_border-color--white: #fcfcfc;
 $button_background-color--black: #141414;
 $button_background-color--white: #fcfcfc;
+
+/* modal windows, tooltips, etc. */
+$modal_border-style: 1px solid;
+$modal_border-color--white: $body_background-color--white;
+$modal_background-color--black: $body_background-color--black;
+$modal_background-color--white: $body_background-color--white;
+
+/* Animations */
+$base-animation-style: 200ms ease-in-out;
