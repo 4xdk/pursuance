@@ -2,7 +2,7 @@ import React from 'react';
 import { Label } from 'react-bootstrap';
 import FaStar from 'react-icons/lib/fa/star';
 import AnimatedNumber from 'react-animated-number';
-import './ContributionPointsCounter.css';
+import './css/ContributionPointsCounter.css';
 
 const ContributionPointsCounter = ({ username, contributionPoints }) => (
   <AnimatedNumber

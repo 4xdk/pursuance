@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userLoginSuccess } from '../../../actions';
-import '../SignUpLogInModal.css';
-import './LogIn.css';
+import '../css/SignUpLogInModal.css';
+import './css/LogIn.css';
 
 const USERNAME_KEY = 'username';
 
