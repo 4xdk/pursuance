@@ -8,7 +8,7 @@ import './utils/origin_polyfill';
 import './utils/object_values_polyfill';
 import store from './store';
 import App from './App';
-import './index.css';
+import './css/index.css';
 
 ReactDOM.render(
   <Provider store={store}>

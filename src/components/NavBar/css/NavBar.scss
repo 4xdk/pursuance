@@ -1,10 +1,11 @@
+@import 'css/_variables.scss';
+
 .navbar {
   position: fixed;
-  background-color: #141414;
   border-radius: 0px;
   border: none;
   margin: 0;
-  height: 60px;
+  height: $header_height;
   width: 100%;
   top: 0;
   z-index: 10;
@@ -18,10 +19,6 @@
 
 .navbar-collapse {
   height: 200px;
-
-  &.collapse {
-    background-color: black;
-  }
 }
 
 .modal-title {
@@ -45,44 +42,102 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
-  color: #fcfcfc !important;
+  height: $header_height;
   padding-left: 0 !important;
   margin-left: 0 !important;
-
-  &:hover {
-    color: #8662ea !important;
-  }
 }
 
 .navbar-nav {
-  height: 60px;
+  height: $header_height;
 
   li {
-    height: 60px;
+    height: $header_height;
 
     a {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 60px;
-      color: #efefef !important;
-
-      &:hover {
-        color: #1fc7d3 !important;
-      }
+      height: $header_height;
 
       button {
         padding-bottom: 2px;
       }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .navbar-nav {
-    background-color: black;
-    border: 1px solid white;
+  @media (max-width: $tablet_width--portrait) {
+    border-width: 1px;
+    border-style: solid;
     border-radius: 5px;
   }
-} 
+}
+
+/* ============ Dark theme ============ */
+
+.App.theme-dark {
+  .navbar {
+    background-color: $body_background-color--black;
+  }
+
+  .navbar-collapse.collapse {
+    background-color: $body_background-color--black;
+  }
+
+  .navbar-brand {
+    color: $body_text-color--white !important;
+
+    &:hover {
+      color: $body_text-color--purple !important;
+    }
+  }
+
+  .navbar-nav {
+    li a {
+      color: $body_text-color--white !important;
+
+      &:hover {
+        color: $body_text-color--blue !important;
+      }
+    }
+
+    @media (max-width: $tablet_width--portrait) {
+      background-color: $button_background-color--black;
+      border-color: $button_border-color--white;
+    } 
+  }
+}
+
+/* ============ Light theme ============ */
+
+.App.theme-light {
+  .navbar {
+    background-color: $body_background-color--white;
+  }
+
+  .navbar-collapse.collapse {
+    background-color: $body_background-color--white;
+  }
+
+  .navbar-brand {
+    color: $body_text-color--black !important;
+
+    &:hover {
+      color: $body_text-color--purple !important;
+    }
+  }
+
+  .navbar-nav {
+    li a {
+      color: $body_text-color--black !important;
+
+      &:hover {
+        color: $body_text-color--blue !important;
+      }
+    }
+
+    @media (max-width: $tablet_width--portrait) {
+      background-color: $button_background-color--white;
+      border-color: $button_border-color--black;
+    } 
+  }
+}

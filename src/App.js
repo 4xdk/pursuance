@@ -8,7 +8,7 @@ import PursuancePage from './components/Content/Pursuance/PursuancePage';
 import NotFound from './components/NotFound/NotFound';
 import CreatePursuance from './components/CreatePursuance/CreatePursuance';
 import { removeNotification, addContributionPoints } from './actions';
-import './App.css';
+import './css/App.css';
 
 class App extends Component {
   render() {
