@@ -235,3 +235,8 @@ export const userLoginSuccess = ({ username }) => ({
 export const userLogoutSuccess = () => ({
   type: 'USER_LOGOUT_SUCCESS'
 });
+
+export const siteThemeChange = ({ themeName }) => ({
+  type: 'SITE_THEME_CHANGE',
+  themeName: themeName
+});

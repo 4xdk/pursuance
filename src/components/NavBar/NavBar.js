@@ -17,7 +17,7 @@ class NavBar extends Component {
   );
 
   render() {
-    const { authenticated, username, contributionPoints } = this.props;
+    const { authenticated } = this.props;
     return (
       <Navbar collapseOnSelect>
         <Navbar.Header>
@@ -74,7 +74,7 @@ class NavBar extends Component {
               authenticated &&
               (
                 <NavItem>
-                  <UserSettingsPopover username={username} contributionPoints={contributionPoints} />
+                  <UserSettingsPopover />
                 </NavItem>
               )
             }

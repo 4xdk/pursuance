@@ -14,11 +14,9 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className={'App theme-' + this.props.themeName}>
           <NavBar
             authenticated={this.props.authenticated}
-            contributionPoints={this.props.contributionPoints}
-            username={this.props.username}
             onRemoveNotification={this.props.removeNotification}
             onIncreaseContributionAmount={this.props.increaseContributionAmount}
             />

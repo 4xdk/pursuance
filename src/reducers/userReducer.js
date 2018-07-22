@@ -3,7 +3,8 @@ const lsUsername = localStorage.getItem('username') || '';
 const initialState = {
   authenticated: lsUsername !== '',
   username: lsUsername,
-  contributionPoints: 160
+  contributionPoints: 160,
+  themeName: 'dark'
 };
 
 export default function(state = initialState, action) {
@@ -32,6 +33,12 @@ export default function(state = initialState, action) {
       return {
         ...state,
         contributionPoints: state.contributionPoints + 3
+      };
+
+    case 'SITE_THEME_CHANGE':
+      return {
+        ...state,
+        themeName: action.themeName
       };
 
     default:
