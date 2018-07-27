@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Popover, OverlayTrigger, Button } from 'react-bootstrap';
 import ContributionPointsCounter from './ContributionPointsCounter';
 import { userLogoutSuccess, siteThemeChange } from '../../../actions';
-import './css/UserSettingsPopover.css';
+import './UserSettingsPopover.css';
 
 const UserSettingsPopover = ({ username, contributionPoints, userLogoutSuccess, siteThemeChange, themeName }) => (
   <OverlayTrigger

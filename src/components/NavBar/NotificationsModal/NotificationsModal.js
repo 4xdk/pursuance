@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import FaSliders from 'react-icons/lib/fa/sliders';
 // import NotificationList from '../../Content/Notifications/NotificationList';
-import './css/NotificationsModal.css';
+import './NotificationsModal.css';
 
 class NotificationsModal extends Component {
 

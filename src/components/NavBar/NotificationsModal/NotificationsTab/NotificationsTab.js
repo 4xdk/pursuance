@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FaSliders from 'react-icons/lib/fa/sliders';
-import './css/NotificationsTab.css';
+import './NotificationsTab.css';
 
 class NotificationsTab extends Component {
 

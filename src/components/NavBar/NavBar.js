@@ -6,7 +6,7 @@ import SignUp from './SignUp/SignUp';
 import LogIn from './LogIn/LogIn';
 import NotificationsModal from './NotificationsModal/NotificationsModal';
 import UserSettingsPopover from './UserSettingsPopover';
-import './css/NavBar.css';
+import './NavBar.css';
 
 class NavBar extends Component {
 
