@@ -1,12 +1,31 @@
-.pursuance-list p {
-  color: #efefef;
-}
+@import '../../../css/_variables.scss';
 
 .pursuance-list a {
-  color: #50b3fe;
   text-decoration: none;
 }
 
 .pursuance-list-ctn a:hover {
   text-decoration: underline;
+}
+
+// ============ Dark theme ============
+.theme-light {
+  .pursuance-list p {
+    color: $body_text-color--white;
+  }
+  
+  .pursuance-list a {
+    color: $body_link-color--blue;
+  }
+}
+
+// ============ Light theme ============
+.theme-light {
+  .pursuance-list p {
+    color: $body_text-color--black;
+  }
+  
+  .pursuance-list a {
+    color: $body_link-color--blue;
+  }
 }

@@ -1,32 +1,42 @@
-/* Layout */
+// Layout
 $layout-tablet_width--portrait: 768px;
 $layout-xsmall: 639px; 
 
 $header_height: 60px;
 
-
-/* Background */
+// Background
 $body_background-color--black: #141414;
 $body_background-color--white: #fcfcfc;
 
-/* Text */
+// Text
 $body_text-color--black: #141414;
 $body_text-color--blue: #1fc7d3;
+$body_link-color--blue: #50b3fe;
 $body_text-color--purple: #8662ea;
+$body_text-color--dark-gray: #444;
+$body_text-color--light-gray: #eee;
 $body_text-color--white: #fcfcfc;
 
-/* Buttons */
+// Buttons
 $button_border-style: 1px solid;
 $button_border-color--black: #141414;
 $button_border-color--white: #fcfcfc;
 $button_background-color--black: #141414;
 $button_background-color--white: #fcfcfc;
 
-/* modal windows, tooltips, etc. */
+// Icons
+$icon_color--white: #fff;
+$icon_color--black: #000;
+
+// Boxes
+$box_border-color--gray: #808080;
+$box_border-color--dark-gray: #444;
+
+// modal windows, tooltips, etc.
 $modal_border-style: 1px solid;
 $modal_border-color--white: $body_background-color--white;
 $modal_background-color--black: $body_background-color--black;
 $modal_background-color--white: $body_background-color--white;
 
-/* Animations */
+// Animations
 $base-animation-style: 200ms ease-in-out;

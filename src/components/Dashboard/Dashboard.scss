@@ -1,21 +1,19 @@
 @import 'css/_variables.scss';
 
 #dashboard {
-  background-color: #1c1c1c;
-  height: calc(100vh - 60px);
+  height: calc(100vh - $header_height);
   padding: 30px;
-  margin-top: 60px;
+  margin-top: $header_height;
   padding-bottom: 50px;
   overflow: auto;
 
-  @media (max-width: 799px) {
+  @media (max-width: $layout-tablet_width--portrait) {
     padding: 30px 0;
   }
 }
 
 #dashboard-title {
   text-align: center;
-  color: #fcfcfc;
 }
 
 #dash-first-row {
@@ -33,7 +31,8 @@
 
 .dash-box {
   padding: 12px;
-  border: 2px solid #808080;
+  border-width: 2px;
+  border-style: solid;
   border-radius: 6px;
 }
 
@@ -42,13 +41,60 @@
 }
 
 .dash-box-title {
-  color: #eee;
   display: inline;
 }
 
 .add-icon {
-  color: #fff;
+  color: $icon_color--white;
   position: absolute;
   margin-left: 15px;
   margin-top: 5px;
+}
+
+
+// ============ Dark theme ============
+.theme-dark {
+  #dashboard {
+    background-color: $body_background-color--black;
+  }
+
+  #dashboard-title {
+    color: $body_background-color--white;
+  }
+
+  .dash-box {
+    border-color: $box_border-color--gray;
+  }
+
+  .dash-box-title {
+    color: $body_text-color--light-gray;
+  }
+
+  .add-icon {
+    color: $icon_color--white;
+  }
+}
+
+// ============ Light theme ============
+
+.theme-light {
+  #dashboard {
+    background-color: $body_background-color--white;
+  } 
+
+  #dashboard-title {
+    color: $body_background-color--black;
+  }
+
+  .dash-box {
+    border-color: $box_border-color--dark-gray;
+  }
+
+  .dash-box-title {
+    color: $body_text-color--dark-gray;
+  }
+
+  .add-icon {
+    color: $icon_color--black;
+  }
 }
