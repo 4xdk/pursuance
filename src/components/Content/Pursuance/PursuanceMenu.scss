@@ -1,6 +1,8 @@
+@import '../../../_variables.scss';
+
 .pursuance-btn-group a {
-  background-color: #212121;
-  border: 1px solid #6d6d6d;
+  border-width: 1px;
+  border-style: solid;
   border-right: none;
   border-bottom: none;
   width: 100px;
@@ -8,22 +10,45 @@
   padding-top: 10px;
 }
 
-@media (max-width: 1279px) {
+a.pursuance-bottom-btn {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+@media (max-width: $layout-desktop_width--small) {
   .pursuance-btn-group a {
     width: 80px;
     height: 60px;
   }
+
   .pursuance-btn-group svg {
     width: 24px;
     height: 24px;
   }
 }
 
-a.pursuance-top-btn {
-  border-top-right-radius: 0px;
+// ============ Dark theme ============
+
+.theme-dark {
+  .pursuance-btn-group a {
+    background-color: $body_background-color--black;
+    border-color: $box_border-color--medium-gray;
+  }
+
+  a.pursuance-bottom-btn {
+    border-bottom-color: $box_border-color--medium-gray;
+  }
 }
 
-a.pursuance-bottom-btn {
-  border-bottom-right-radius: 0px;
-  border-bottom: 1px solid #6d6d6d;
+// ============ Light theme ============
+
+.theme-light {
+  .pursuance-btn-group a {
+    background-color: $body_background-color--white;
+    border-color: $box_border-color--dark-gray;
+  }
+
+  a.pursuance-bottom-btn {
+    border-bottom-color: $box_border-color--medium-gray;
+  }
 }

@@ -1,20 +1,41 @@
-@import '../../_variables.scss';
+@import '_variables.scss';
 
-.create-pursuance-container {
-  text-align: center;
-  margin-top: $header_height;
-  width: 100%;
-  height: calc(100vh - #{$header_height});
+.App {
+  position: relative;
+}
+
+.overflow-x-ctn {
+  overflow-x: auto;
+}
+
+.overflow-y-ctn {
   overflow-y: auto;
 }
 
-.create-pursuance-header {
-  padding-top: 20px;
+.content-ctn {
+  min-height: calc(100vh - 110px);
+  margin-top: $header_height;
+  width: 100%;
 }
+
+.modal-backdrop {
+  position: relative;
+}
+
+@media (max-width: $layout-mobile_width--landscape) {
+  .hide-xsmall {
+    display: none;
+  }
+}
+
 
 // ============ Dark theme ============
 
 .theme-dark {
+  .content-ctn {
+    background-color: $body_background-color--black;
+  }
+
   .create-pursuance-container {
     background-color: $body_background-color--black;
   }
@@ -27,6 +48,10 @@
 // ============ Light theme ============
 
 .theme-light {
+  .content-ctn {
+    background-color: $body_background-color--white;
+  }
+
   .create-pursuance-container {
     background-color: $body_background-color--white;
   }

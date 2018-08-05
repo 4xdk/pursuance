@@ -1,19 +1,20 @@
+@import '../../../_variables.scss';
+
 .create-pursuance-form {
   width: 70%;
   margin: 0 auto;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
+  max-width: 1280px;
 }
 
 .create-pursuance-input {
   width: 80%;
   margin: 7px auto;
-  font-size: 18px;
-  border-radius: 4px;
+  font-size: $text-input_font-size;
+  border-radius: $text-input_border-radius;
   border: none;
   outline: none;
   padding-left: 5px;
+  resize: vertical;
 }
 
 .create-pursuance-setting {
@@ -21,24 +22,69 @@
   flex-direction: row;
   margin-left: 10%;
   width: 45%;
+
+  .radio-field {
+    margin-top: 0;
+  }
 }
 
 .create-pursuance-info-icon {
   cursor: pointer;
   margin: 0 10px;
-  color: white;
 }
 
 .radio-field-span {
   margin: 0 15px 0 5px;
-  color: rgb(255, 255, 255);
+  line-height: 24px;
 }
 
 .create-pursuance-button {
-  font-size: 26px;
+  font-size: $button_font-size--primary;
   width: 40%;
   margin: 15px auto;
-  border-radius: 10px;
-  color: #fff;
-  background-color: #288bd6;
+  border-radius: $button_border-radius--primary;
+}
+
+// ============ Dark theme ============
+
+.theme-dark {
+  .create-pursuance-info-icon {
+    color: $icon_color--white;
+  }
+
+  .create-pursuance-input {
+    background-color: $text-input_background-color--white;
+    color: $text-input_text-color--black;
+  }
+  
+  .radio-field-span {
+    color: $body_text-color--white;
+  }
+  
+  .create-pursuance-button {
+    color: $body_text-color--white;
+    background-color: $button_background-color--blue;
+  }
+}
+
+// ============ Light theme ============
+
+.theme-light {
+  .create-pursuance-info-icon {
+    color: $icon_color--white;
+  }
+
+  .create-pursuance-input {
+    background-color: $text-input_background-color--light-gray;
+    color: $text-input_text-color--black;
+  }
+  
+  .radio-field-span {
+    color: $body_text-color--black;
+  }
+  
+  .create-pursuance-button {
+    color: $body_text-color--white;
+    background-color: $button_background-color--blue;
+  }
 }

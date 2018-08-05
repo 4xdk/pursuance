@@ -1,15 +1,35 @@
+@import '../../_variables.scss';
+
 .content {
-  background-color: #212121;
   height: 100%;
   width: 100%;
   padding: 20px;
   border-bottom-left-radius: 5px;
-  border: 1px solid #6d6d6d;
+  border-width: 1px;
+  border-style: solid;
   border-right: none;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: $layout-desktop_width--small) {
   .content {
     padding: 5px;
+  }
+}
+
+// ============ Dark theme ============
+
+.theme-dark {
+  .content {
+    background-color: $body_background-color--black;
+    border-color: $box_border-color--medium-gray;
+  }
+}
+
+// ============ Light theme ============
+
+.theme-light {
+  .content {
+    background-color: $body_background-color--white;
+    border-color: $box_border-color--dark-gray;
   }
 }

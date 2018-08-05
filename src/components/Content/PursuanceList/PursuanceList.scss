@@ -1,4 +1,4 @@
-@import '../../../css/_variables.scss';
+@import '../../../_variables.scss';
 
 .pursuance-list a {
   text-decoration: none;
@@ -9,7 +9,7 @@
 }
 
 // ============ Dark theme ============
-.theme-light {
+.theme-dark {
   .pursuance-list p {
     color: $body_text-color--white;
   }

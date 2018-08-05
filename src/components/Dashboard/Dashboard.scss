@@ -1,4 +1,4 @@
-@import 'css/_variables.scss';
+@import '_variables.scss';
 
 #dashboard {
   height: calc(100vh - $header_height);
@@ -70,7 +70,7 @@
     color: $body_text-color--light-gray;
   }
 
-  .add-icon {
+  .add-icon {  
     color: $icon_color--white;
   }
 }

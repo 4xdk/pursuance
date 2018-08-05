@@ -1,4 +1,4 @@
-@import 'css/_variables.scss';
+@import '_variables.scss';
 
 .navbar {
   position: fixed;
@@ -61,6 +61,7 @@
 
       button {
         padding-bottom: 2px;
+        background: transparent;
       }
     }
   }
@@ -72,7 +73,7 @@
   }
 }
 
-/* ============ Dark theme ============ */
+// ============ Dark theme ============
 
 .theme-dark {
   .navbar {
@@ -107,7 +108,7 @@
   }
 }
 
-/* ============ Light theme ============ */
+// ============ Light theme ============
 
 .theme-light {
   .navbar {
