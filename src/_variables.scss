@@ -48,12 +48,13 @@ $button_border-radius--primary: 10px;
 $button_border-color--black: $color-gray1;
 $button_border-color--white: $color-white;
 $button_border-color--dark-gray: $color-gray2;
-// $button_border-color--light-gray: ; 
+$button_border-color--medium-gray: $color-gray8; 
 $button_border-color--light-gray: $color-gray15;
 
 $button_background-color--black: $color-gray1;
 $button_background-color--white: $color-white;
 $button_background-color--blue: $color-blue1;
+$button_background-color--dark-gray: $color-gray2;
 $button_background-color--light-gray: $color-gray15;
 
 $button_font-size--primary: 26px;
@@ -65,6 +66,7 @@ $icon_color--blue: $color-blue2;
 $icon_color--light-blue: $color-blue3;
 
 // Boxes
+$box_border-color--light-gray: $color-gray9;
 $box_border-color--gray: $color-gray8;
 $box_border-color--medium-gray: $color-gray5;
 $box_border-color--dark-gray: $color-gray3;

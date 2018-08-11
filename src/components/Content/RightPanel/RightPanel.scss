@@ -1,3 +1,12 @@
+@import '../../../_variables.scss';
+
+#right-panel {
+  height: 100%;
+  width: 50px;
+  border-style: solid;
+  border-width: 1px;
+}
+
 .right-panel-ctn {
   display: flex;
   right: 0;
@@ -10,11 +19,10 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  border: 1px solid #6d6d6d;
-  color: #efefef;
   font-size: 1.2em;
-  background-color: #1c1c1c;
   position: absolute;
+  border-style: solid;
+  border-width: 1px;
   height: 100%;
   max-height: calc(100vh - 60px);
   width: 100%;
@@ -26,34 +34,14 @@
   overflow-y: auto;
 }
 
-@media (max-width: 639px) {
-  .right-panel-content-ctn {
-    width: calc(100vw - 50px);
-    min-width: calc(100vw - 50px);
-    max-width: calc(100vw - 50px);
-  }
-}
-
-#right-panel {
-  height: 100%;
-  width: 50px;
-  border: 1px solid #6d6d6d;
-  background-color: #212121;
-}
-
 .toggle-panel-ctn {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
-  border-bottom: 1px solid #6d6d6d;
-  color: #fff;
-}
-
-.toggle-panel-ctn:hover {
-  background-color: #333333;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
   cursor: pointer;
-  color: #1fc7d3;
 }
 
 .rp-menu-ctn {
@@ -65,10 +53,80 @@
 }
 
 .rp-menu-icon {
-  color: #50b3fe;
   margin-top: 8px;
+  cursor: pointer;
 }
 
-.rp-menu-icon.Active {
-  color: #9b77ff;
+@media (max-width: $layout-mobile_width--landscape) {
+  .right-panel-content-ctn {
+    width: calc(100vw - 50px);
+    min-width: calc(100vw - 50px);
+    max-width: calc(100vw - 50px);
+  }
+}
+
+// ============ Dark theme ============
+
+.theme-dark {
+  #right-panel {
+    border-color: $box_border-color--medium-gray;
+    background-color: $body_background-color--black;
+  }
+
+  .right-panel-content-ctn {
+    border-color: $box_border-color--medium-gray;
+    color: $color-gray15;
+    background-color: $body_background-color--black;
+  }
+
+  .toggle-panel-ctn {
+    border-bottom-color: $box_border-color--medium-gray;
+    color: $color-pure-white;
+  
+    &:hover {
+      background-color: $color-gray2;
+      color: $color-blue4;
+    }
+  }
+
+  .rp-menu-icon {
+    color: $color-blue2;
+
+    &.Active {
+      color: $color-violet1;
+    }
+  }
+}
+
+// ============ Light theme ============
+
+.theme-light {
+  #right-panel {
+    border-color: $box_border-color--light-gray;
+    background-color: $color-gray15;
+  }
+
+  .right-panel-content-ctn {
+    border-color: $box_border-color--light-gray;
+    color: $color-gray2;
+    background-color: $color-gray15;
+  }
+
+  .toggle-panel-ctn {
+    border-bottom-color: $box_border-color--light-gray;
+    color: $color-pure-black;
+  
+    &:hover {
+      background-color: $color-gray15;
+      color: $color-blue4;
+    }
+  }
+
+  .rp-menu-icon {
+    color: $color-blue2;
+
+    &.Active {
+      color: $color-violet1;
+    }
+  }
 }

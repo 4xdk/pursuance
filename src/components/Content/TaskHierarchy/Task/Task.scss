@@ -165,8 +165,8 @@
   }
 
   .toggle-icon-ctn-disable {
-    background-color: $button_border-color--dark-gray;
-    border-color: $button_background-color--black;
+    background-color: $button_background-color--dark-gray;
+    border-color: $button_border-color--black;
   }
 
   .task-row-ctn {
@@ -191,10 +191,10 @@
   }
 
   .assignee-button {
-    background-color: $color-pure-black;
+    background-color: $button_background-color--black;
   
     &:hover {
-      border-color: $color-pure-white;
+      border-color: $button_border-color--white;
     }
   }
 
@@ -203,17 +203,17 @@
     color: $color-pure-white;
   
     &:hover {
-      border-color: $color-pure-white;
+      border-color: $button_border-color--white;
     }
   }
 
   .icon-ctn {
-    background-color: $color-pure-black;
-    border-color: $color-gray8;
+    background-color: $button_background-color--black;
+    border-color: $button_border-color--medium-gray;
 
     &:hover {
       color: $color-gray15;
-      border-color: $color-pure-white;
+      border-color: $button_border-color--white;
     }
 
     svg {
