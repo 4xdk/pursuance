@@ -6,66 +6,73 @@ $layout-mobile_width--portrait: 479px;
 
 $header_height: 60px;
 
-// Generic colors - to add new use http://chir.ag/projects/name-that-color/ 
-$color-gallery: #eee;
-
-$color-gray-1: #141414;
-$color-gray-2: #333;
-$color-gray-3: #444;
+// Generic colors
+$color-pure-black: #000;
+$color-gray1: #141414;
+$color-gray2: #333;
+$color-gray3: #444;
+$color-gray5: #6d6d6d;
+$color-gray8: #808080;
+$color-gray9: #999;
+$color-gray15: #eee;
 
 $color-white: #fcfcfc;
+$color-pure-white: #fff;
 
-$color-violet-1: #9b77ff;
-$color-violet-2: #bb97ff;
+$color-violet1: #9b77ff;
+$color-violet2: #bb97ff;
+$color-violet4: #8662ea;
+$color-violet5: rgba(170, 0, 255, .9);
 
-$color-curious-blue: #288bd6;
-$color-malibu: #50b3fe;
-$color-malibu--light: #71d4ff;
+$color-blue1: #288bd6;
+$color-blue2: #50b3fe;
+$color-blue3: #71d4ff;
+$color-blue4: #1fc7d3;
 
 // Background
-$body_background-color--black: $color-gray-1;
+$body_background-color--black: $color-gray1;
 $body_background-color--white: $color-white;
 
 // Text
-$body_text-color--black: $color-gray-1;
-$body_text-color--blue: #1fc7d3;
-$body_link-color--blue: $color-malibu;
-$body_text-color--purple: #8662ea;
-$body_text-color--dark-gray: $color-gray-3;
-$body_text-color--light-gray: $color-gallery;
+$body_text-color--black: $color-gray1;
+$body_text-color--blue: $color-blue4;;
+$body_link-color--blue: $color-blue2;
+$body_text-color--purple: $color-violet4;
+$body_text-color--dark-gray: $color-gray3;
+$body_text-color--light-gray: $color-gray15;
 $body_text-color--white: $color-white;
 
 // Buttons
 $button_border-style: 1px solid;
 $button_border-radius--primary: 10px;
-$button_border-color--black: $color-gray-1;
+$button_border-color--black: $color-gray1;
 $button_border-color--white: $color-white;
-$button_border-color--dark-gray: $color-gray-2;
+$button_border-color--dark-gray: $color-gray2;
 // $button_border-color--light-gray: ; 
-$button_border-color--light-gray: $color-gallery;
+$button_border-color--light-gray: $color-gray15;
 
-$button_background-color--black: $color-gray-1;
+$button_background-color--black: $color-gray1;
 $button_background-color--white: $color-white;
-$button_background-color--blue: $color-curious-blue;
-$button_background-color--light-gray: $color-gallery;
+$button_background-color--blue: $color-blue1;
+$button_background-color--light-gray: $color-gray15;
 
 $button_font-size--primary: 26px;
 
 // Icons
-$icon_color--white: #fff;
-$icon_color--black: #000;
-$icon_color--blue: $color-malibu;
-$icon_color--light-blue: $color-malibu--light;
+$icon_color--white: $color-pure-white;
+$icon_color--black: $color-pure-black;
+$icon_color--blue: $color-blue2;
+$icon_color--light-blue: $color-blue3;
 
 // Boxes
-$box_border-color--gray: #808080;
-$box_border-color--medium-gray: #6d6d6d;
-$box_border-color--dark-gray: #444;
+$box_border-color--gray: $color-gray8;
+$box_border-color--medium-gray: $color-gray5;
+$box_border-color--dark-gray: $color-gray3;
 
 // Forms
 $text-input_background-color--white: #fff;
-$text-input_background-color--light-gray: $color-gallery;
-$text-input_text-color--black: #000;
+$text-input_background-color--light-gray: $color-gray15;
+$text-input_text-color--black: $color-pure-black;
 $text-input_border-radius: 4px;
 $text-input_font-size: 18px;
 
@@ -73,7 +80,7 @@ $text-input_font-size: 18px;
 $modal_border-style: 1px solid;
 $modal_border-color--white: $color-white;
 
-$modal_background-color--black: $color-gray-1;
+$modal_background-color--black: $color-gray1;
 $modal_background-color--white: $color-white;
 
 // Animations
