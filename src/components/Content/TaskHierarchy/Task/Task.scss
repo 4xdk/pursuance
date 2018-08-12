@@ -273,12 +273,17 @@
     }
   }
 
+  .task-due-date {
+    color: $body_text-color--black;
+  }
+
   .assigned-to-me {
     background-color: $color-violet5;
   }
 
   .assignee-button {
     background-color: $color-pure-white;
+    color: $body_text-color--black;
   
     &:hover {
       border-color: $color-pure-black;

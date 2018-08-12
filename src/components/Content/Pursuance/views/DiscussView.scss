@@ -1,7 +1,8 @@
+@import '../../../../_variables.scss';
+
 .discuss-ctn {
   display: flex;
   width: 100%;
-  background-color: #1c1c1c;
   word-break: break-word;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -12,7 +13,8 @@
   display: flex;
   flex: 1;
   height: calc(100vh - 60px);
-  border: 1px solid #6d6d6d;
+  border-style: solid;
+  border-width: 1px;
   border-right: none;
   border-bottom-left-radius: 4px;
   margin-right: 50px;
@@ -23,21 +25,45 @@
   max-width: calc(100vw - 662px);
 }
 
-@media (min-width: 1429px) {
+@media (max-width: $layout-mobile_width--portrait) {
+  /* FIXME(elimisteve): Not affecting UI when screen width < 350px for some reason */
   .leapchat-frame-narrow {
-    max-width: calc(65vw - 162px);
+    max-width: calc(100vw - 50px);
   }
 }
 
-@media (max-width: 1279px) {
+@media (max-width: $layout-desktop_width--small) {
   .leapchat-frame-narrow {
     max-width: calc(100vw - 628px);
   }
 }
 
-@media (max-width: 399px) {
-  /* FIXME(elimisteve): Not affecting UI when screen width < 350px for some reason */
+@media (min-width: $layout-desktop_width--medium) {
   .leapchat-frame-narrow {
-    max-width: calc(100vw - 50px);
+    max-width: calc(65vw - 162px);
+  }
+}
+
+// ============ Dark theme ============
+
+.theme-dark {
+  .discuss-ctn {
+    background-color: $color-gray1;
+  }
+
+  .leapchat-frame {
+    border-color: $color-gray5;
+  }
+}
+
+// ============ Light theme ============
+
+.theme-light {
+  .discuss-ctn {
+    background-color: $color-gray15;
+  }
+
+  .leapchat-frame {
+    border-color: $color-gray9;
   }
 }

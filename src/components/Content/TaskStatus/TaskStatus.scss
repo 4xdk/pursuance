@@ -1,3 +1,5 @@
+@import '../../../_variables.scss';
+
 .task-status-ctn {
   display: flex;
   flex: 1;
@@ -7,11 +9,36 @@
   word-spacing: -0.08em;
   min-width: 145px;
   max-width: 145px;
-}
+  
+  &:hover #task-edit-icon {
+    display: block;
+  }
 
-.task-status-ctn .dropdown {
-  height: 100%;
-  width: 100%;
+  .dropdown {
+    height: 100%;
+    width: 100%;
+
+    ul {
+      z-index: 9001;
+      border-radius: 5px;
+      margin: 4px 0 0 -7px;
+      padding: 0;
+      min-width: 0;
+  
+      li a {
+        padding: 2px 6px;
+      }
+    }
+  }
+
+  img {
+    display: flex;
+    min-width: 30px;
+    max-width: 46px;
+    width: 14vw;
+    height: auto;
+    margin-left: 6px;
+  }
 }
 
 #task-status-dropdown {
@@ -20,7 +47,6 @@
   padding: 0;
   text-align: left;
   background: none;
-  color: #e0e0e0;
   border: none;
 }
 
@@ -36,59 +62,52 @@
   display: none;
   position: relative;
   transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
 }
 
-.task-status-ctn:hover #task-edit-icon {
-  display: block;
-}
-
-.task-status-ctn .dropdown ul {
-  z-index: 9001;
-  border-radius: 5px;
-  margin: 4px 0 0 -7px;
-  padding: 0;
-  min-width: 0;
-}
-
-.task-status-ctn .dropdown ul li a {
-  padding: 2px 6px;
-}
-
-.task-status-ctn img {
-  display: flex;
-  min-width: 30px;
-  max-width: 46px;
-  width: 14vw;
-  height: auto;
-  margin-left: 6px;
-}
-
-@media (min-width: 1367px) {
+@media (min-width: $layout-desktop_width--small) {
   .task-status-ctn {
     white-space: nowrap;
   }
 }
 
-@media (max-width: 499px) {
+@media (max-width: $layout-mobile_width--portrait) {
   .task-status-ctn {
     min-width: 74px;
     max-width: 74px;
+
+    img {
+      display: none;
+    }
   }
+
   #task-status-dropdown {
     word-break: break-word;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: pre-wrap;
   }
-  .task-status-ctn img {
-    display: none;
+}
+
+// ============ Dark theme ============
+
+.theme-dark {
+  #task-status-dropdown {
+    color: $color-gray15;
+  }
+
+  .task-status-Done #task-status-dropdown {
+    color: $color-green1;
   }
 }
 
-.task-status-Done #task-status-dropdown {
-  color: #2bde2b;
+// ============ Light theme ============
+
+.theme-light {
+  #task-status-dropdown {
+    color: $color-gray1;
+  }
+
+  .task-status-Done #task-status-dropdown {
+    color: $color-green2;
+  }
 }

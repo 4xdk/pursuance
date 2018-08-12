@@ -1,47 +1,34 @@
-.task-list-ctn {
-  word-break: break-word;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  min-width: 0; /* Firefox workaround; see https://github.com/philipwalton/flexbugs/issues/39 */
-}
-
-.task-list-ctn .pursuance-tasks-ctn {
-  margin: 16px;
-}
-
-@media (max-width: 639px) {
-  .task-list-title,
-  .task-list-filter {
-    margin-left: 8px;
-  }
-  .task-list-ctn .pursuance-tasks-ctn {
-    margin: 4px;
-  }
-}
-
-.task-list-ctn .pursuance-tasks-ctn input {
-  color: black;
-}
+@import '../../../../_variables.scss';
 
 .task-list {
   padding-left: 0;
 }
 
-.task-item {
-  margin-bottom: 8px;
-  padding: 5px 2px 5px 10px;
-  border: 1px solid #6d6d6d;
-  border-radius: 10px;
-}
+.task-list-ctn {
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-width: 0; /* Firefox workaround; see https://github.com/philipwalton/flexbugs/issues/39 */
 
-@media (max-width: 399px) {
-  .task-item {
-    padding: 0 0 0 4px;
+  .task-assignment-ctn {
+    font-size: 1em;
+  }
+
+  .pursuance-tasks-ctn {
+    margin: 16px;
   }
 }
 
-.task-item .task-assignment-ctn {
-  margin: 4px 10px 4px 0;
+.task-item {
+  margin-bottom: 8px;
+  padding: 5px 2px 5px 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+
+  .task-assignment-ctn {
+    margin: 4px 10px 4px 0;
+  }
 }
 
 .task-list-filter {
@@ -51,50 +38,96 @@
   align-items: center;
   padding-bottom: 10px;
   padding-left: 3px;
+
+  .clear-input {
+    transition: opacity $base-animation-style;
+    display: inline-block;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    pointer-events: auto;
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    opacity: 0.8;
+    margin-left: 10px;
+    background-color: transparent;
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    &.clear-input--hide {
+      cursor: default;
+      opacity: 0.2;
+    }
+
+    &:not(.clear-input--hide):hover {
+      opacity: 1;
+    }
+  }
+
+  input {
+    margin-left: 10px;
+    width: calc(100% - 65px);
+    height: 34px;
+    border-radius: 4px;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+  }
 }
 
-.task-list-filter input {
-  margin-left: 10px;
-  width: calc(100% - 65px);
-  height: 34px;
-  border-radius: 4px;
-  padding-left: 5px;
-  border: none;
-  outline: none;
+@media (max-width: $layout-mobile_width--portrait) {
+  .task-item {
+    padding: 0 0 0 4px;
+  }
 }
 
-.task-list-ctn .task-assignment-ctn {
-  font-size: 1em;
+@media (max-width: $layout-mobile_width--landscape) {
+  .task-list-title,
+  .task-list-filter {
+    margin-left: 8px;
+  }
+  .task-list-ctn .pursuance-tasks-ctn {
+    margin: 4px;
+  }
 }
 
-.task-list-filter .clear-input {
-  transition: opacity 200ms ease-in-out;
-  display: inline-block;
-  color: #fff;
-  z-index: 1;
-  width: 28px;
-  height: 28px;
-  pointer-events: auto;
-  cursor: pointer;
-  padding: 0;
-  border: 0;
-  opacity: 0.8;
-  background-color: transparent;
-  margin-left: 10px;
+// ============ Dark theme ============
+
+.theme-dark {
+  .task-list-ctn .pursuance-tasks-ctn input {
+    color: $color-pure-black;
+  }
+
+  .task-item {
+    border-color: $color-gray5;
+  }
+
+  .task-list-filter {
+    .clear-input {
+      color: $color-pure-white;
+    }
+  }
 }
 
-.task-list-filter .clear-input.clear-input--hide {
-  cursor: default;
-  opacity: 0.2;
-}
- 
-.task-list-filter .clear-input:focus,
-.task-list-filter .clear-input:active {
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  background-color: transparent;
-}
- 
-.task-list-filter .clear-input:not(.clear-input--hide):hover {
-  opacity: 1;
+// ============ Light theme ============
+
+.theme-light {
+  .task-list-ctn .pursuance-tasks-ctn input {
+    color: $color-pure-white;
+  }
+
+  .task-item {
+    border-color: $color-gray9;
+  }
+
+  .task-list-filter {
+    .clear-input {
+      color: $color-pure-black;
+    }
+  }
 }
